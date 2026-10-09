@@ -15,7 +15,7 @@ public static double launchAngleDegrees = 55;
 		double velocityY = launchVelocity * Math.sin(Math.toRadians(launchAngleDegrees));
 		double timeToTarget = distanceToTarget / velocityX;
 		double heightAtTarget = launchHeight + velocityY * timeToTarget - 0.5 * GRAVITY * Math.pow(timeToTarget, 2);
-		System.out.println(heightAtTarget);
+		System.out.printf(" hightAtTarget:%.2f%n timeToTarget:2%f%n launchVelocity:2%f%n",heightAtTarget, timeToTarget, launchVelocity);
 
 
 
