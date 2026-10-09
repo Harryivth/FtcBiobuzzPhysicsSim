@@ -23,8 +23,8 @@ public class Lesson3 {
 			System.out.printf("ballX%.2f ballY%.2f ballYVelocity%.2f%n",ballX, ballY, ballYVelocity);
 		}
 		double entryAngle = ballXVelocity - ballYVelocity;
-		System.out.printf("entryAngle%.2f",entryAngle);
-
+		System.out.printf("entryAngle%.2f%n",entryAngle);
+		System.out.printf("launchSpeed%.2f",launchSpeed);
 	}
 
 
