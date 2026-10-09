@@ -1,10 +1,10 @@
 
 public class Lesson2 {
 	public static final double GRAVITY = 9.81;
-public static double distanceToTarget = 3;
-public static double targetHeight = 1.0;
-public static double launchHeight = 0.3;
-public static double launchAngleDegrees = 55;
+	public static double distanceToTarget = 3;
+	public static double targetHeight = 1.0;
+	public static double launchHeight = 0.3;
+	public static double launchAngleDegrees = 55;
 
 
 
