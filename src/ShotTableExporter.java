@@ -38,7 +38,7 @@ public class ShotTableExporter {
 			writer.println("    // Flywheel speed, in rpm");
 			writer.println("    public static final double[] WHEEL_RPM = {");
 			for (ShotTableCalculator.BestShot row : shotTable) {
-				writer.printf(Locale.US, "        %.1f,%n", Lesson8.calculateWheelRpm(row.launchSpeed));
+				writer.printf(Locale.US, "        %.1f,%n", ShotTableCalculator.calculateWheelRpm(row.launchSpeed));
 			}
 			writer.println("    };");
 			writer.println();
@@ -46,7 +46,7 @@ public class ShotTableExporter {
 			writer.println("    // Hood servo position (0 to 1)");
 			writer.println("    public static final double[] SERVO_POSITION = {");
 			for (ShotTableCalculator.BestShot row : shotTable) {
-				writer.printf(Locale.US, "        %.4f,%n", Lesson8.calculateServoPosition(row.launchAngleDegrees));
+				writer.printf(Locale.US, "        %.4f,%n", ShotTableCalculator.calculateServoPosition(row.launchAngleDegrees));
 			}
 			writer.println("    };");
 			writer.println();

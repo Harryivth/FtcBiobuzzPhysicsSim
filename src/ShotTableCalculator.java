@@ -149,4 +149,14 @@ public class ShotTableCalculator {
 		}
 		return lastRow;
 	}
+
+	static double calculateWheelRpm(double launchSpeed){
+		double wheelSurfaceSpeed = launchSpeed/ RobotConstants.speedEfficiency;
+		return wheelSurfaceSpeed * 60 / (Math.PI * RobotConstants.wheelDiameterMeters);
+	}
+
+	static double calculateServoPosition(double launchAngleDegrees){
+		double hoodFraction = (launchAngleDegrees - RobotConstants.minimumHoodAngleDegrees) / (RobotConstants.maximumHoodAngleDegrees - RobotConstants.minimumHoodAngleDegrees);
+		return RobotConstants.servoPositionHoodUp + hoodFraction * (RobotConstants.servoPositionHoodDown - RobotConstants.servoPositionHoodUp);
+	}
 }
