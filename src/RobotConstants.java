@@ -12,4 +12,7 @@ public final class RobotConstants {
 
 	public static final double SHOOTER_FORWARD_OFFSET = 0.0; //inches
 	public static final double SHOOTER_LEFT_OFFSET = 0.0; //inches
+	public static final double SHOOTER_HEIGHT_OFFSET = 0.322; //meters
+
+	public static final double MAXIMUM_FLYWHEEL_RPM = 6000; //rpm
 }

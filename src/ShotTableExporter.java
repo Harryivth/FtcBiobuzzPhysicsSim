@@ -14,7 +14,7 @@ import java.util.Locale;
  */
 public class ShotTableExporter {
 
-	static void exportShotTable(ArrayList<Lesson8.BestShot> shotTable) throws IOException {
+	static void exportShotTable(ArrayList<ShotTableCalculator.BestShot> shotTable) throws IOException {
 		File directory = new File("OpenShotData");
 
 		if (!directory.exists()){
@@ -29,7 +29,7 @@ public class ShotTableExporter {
 
 			writer.println("    // Distance from the shooter to the target, in meters");
 			writer.println("    public static final double[] DISTANCE_METERS = {");
-			for (Lesson8.BestShot row : shotTable) {
+			for (ShotTableCalculator.BestShot row : shotTable) {
 				writer.printf(Locale.US, "        %.3f,%n", row.distanceToTarget);
 			}
 			writer.println("    };");
@@ -37,7 +37,7 @@ public class ShotTableExporter {
 
 			writer.println("    // Flywheel speed, in rpm");
 			writer.println("    public static final double[] WHEEL_RPM = {");
-			for (Lesson8.BestShot row : shotTable) {
+			for (ShotTableCalculator.BestShot row : shotTable) {
 				writer.printf(Locale.US, "        %.1f,%n", Lesson8.calculateWheelRpm(row.launchSpeed));
 			}
 			writer.println("    };");
@@ -45,7 +45,7 @@ public class ShotTableExporter {
 
 			writer.println("    // Hood servo position (0 to 1)");
 			writer.println("    public static final double[] SERVO_POSITION = {");
-			for (Lesson8.BestShot row : shotTable) {
+			for (ShotTableCalculator.BestShot row : shotTable) {
 				writer.printf(Locale.US, "        %.4f,%n", Lesson8.calculateServoPosition(row.launchAngleDegrees));
 			}
 			writer.println("    };");
@@ -53,7 +53,7 @@ public class ShotTableExporter {
 
 			writer.println("    // Ball flight time, in seconds");
 			writer.println("    public static final double[] FLIGHT_TIME_SECONDS = {");
-			for (Lesson8.BestShot row : shotTable) {
+			for (ShotTableCalculator.BestShot row : shotTable) {
 				writer.printf(Locale.US, "        %.4f,%n", row.flightTimeSeconds);
 			}
 			writer.println("    };");

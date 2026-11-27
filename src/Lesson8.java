@@ -14,7 +14,7 @@ public class Lesson8 {
 
 
 		ArrayList<BestShot> shotTable = buildShotTable(0, 5.5, 0.05);
-		ShotTableExporter.exportShotTable(shotTable);
+//		ShotTableExporter.exportShotTable(shotTable);
 
 // Test 1: robot moving sideways at 1 m/s
 		MovingShot movingTest = calculateMovingShot(shotTable, 0, 0, 1.0, 0.0, 0, 3);
